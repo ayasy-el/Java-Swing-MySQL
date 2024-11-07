@@ -111,7 +111,7 @@ public class Login extends javax.swing.JFrame {
                     JOptionPane.showMessageDialog(null, "berhasil login");
                     this.dispose();
                     dataMahasiswa hm = new dataMahasiswa();
-//                    hm.show();
+                    hm.show();
 
                 }
             }else{
