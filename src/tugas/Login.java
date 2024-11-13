@@ -120,13 +120,13 @@ public class Login extends javax.swing.JFrame {
             st=con.createStatement();
             rs = st.executeQuery(sql);
             if(rs.next()){
-                if(tfus.getText().equals(rs.getString("username")) && tfps.getText().equals(rs.getString("password"))){
+//                if(tfus.getText().equals(rs.getString("username")) && tfps.getText().equals(rs.getString("password"))){
                     JOptionPane.showMessageDialog(null, "berhasil login");
                     this.dispose();
                     ItemList hm = new ItemList();
                     hm.show();
 
-                }
+//                }
             }else{
                     JOptionPane.showMessageDialog(null, "username atau password salah");
                 }

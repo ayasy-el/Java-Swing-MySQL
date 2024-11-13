@@ -254,17 +254,20 @@ public class dataMahasiswa extends javax.swing.JFrame {
 
     private void cariActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cariActionPerformed
         DefaultTableModel tabelTampil1 = new DefaultTableModel();
+        tabelTampil1.addColumn("No");
         tabelTampil1.addColumn("Nama");
         tabelTampil1.addColumn("Nim");
         tabelTampil1.addColumn("Kelas");
         tabelTampil1.addColumn("Semester");
         try {
 //            KoneksiDB();
+            int i = 1;
             sql = "Select * from mahasiswa where nim like '%" + tfnim.getText() + "%'";
             st = con.createStatement();
             mhswa = st.executeQuery(sql);
             while (mhswa.next()) {
                 tabelTampil1.addRow(new Object[]{
+                    ("" + i++),
                     mhswa.getString(1),
                     mhswa.getString(2),
                     mhswa.getString(3),
